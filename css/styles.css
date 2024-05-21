@@ -1,0 +1,174 @@
+/* ----- Fuente ----- */
+  @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+/* ----- Variables ----- */
+:root {
+    /* colores primarios */
+    --nutmeg: hsl(14, 45%, 36%);
+    --dark-raspberry: hsl(332, 51%, 32%);
+    /* colores neutrales */
+    --white: hsl(0, 0%, 100%);
+    --rose-white: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --light-grey: hsl(30, 18%, 87%);
+    --wenge-brown: hsl(30, 10%, 34%);
+    --dark-charcoal: hsl(24, 5%, 18%);
+
+    /* config. generales */
+    --fuente-young: "Young Serif", serif;
+    --fuente-outfit: "Outfit", sans-serif;
+    --ftsize: 1rem;
+    --lheight: 22px;
+}
+
+body {
+    font-size: var(--ftsize);
+    color: var(--wenge-brown);
+    line-height: var(--lheight);
+    font-family: var(--fuente-outfit);
+    background-color: var(--eggshell);
+    font-weight: 400;
+}
+
+/* ----- Estilos generales ----- */
+.contenido,.receta {    padding: 40px;}
+
+.descripcion,.preparacion,.ingredientes,.instructiones,.nutricion {
+    padding: 20px 0;
+}
+
+/*efecto hover */
+.descripcion h1 {
+    transition: transform .2s; 
+}
+ 
+.descripcion h1:hover {
+    transform: scale(1.1);
+    text-shadow: rgba(246, 170, 246 ,1) 1px 2px 1em;
+    cursor: pointer; 
+}
+
+h2 {
+    color: var(--nutmeg);
+    font-weight: 400;
+    font-family: var(--fuente-young);
+}
+
+ul li {    list-style-type: square;}
+
+hr {    border: 1px solid var(--light-grey);}
+
+/* ----- Estilos contenido ----- */
+.contenido {
+    display: flex;
+    justify-content: center;
+}
+
+/* ----- Estilos receta ----- */
+.receta {
+    width: 680px;
+    border-radius: 15px;
+    background-color: var(--white);
+}
+
+/* ----- Estilos seccion header ----- */
+.header--image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/*efecto hover */
+.header img {
+    transition: transform .2s;    
+}
+ 
+.header img:hover {
+    transform: scale(1.1);
+    opacity: 75%;
+/*    cursor: pointer;*/
+    cursor: url('../images/icono.png'), auto; 
+}
+
+/* ----- Estilos seccion descripcion ----- */
+h1 {
+    font-size: 1.8rem;
+    color: var(--dark-charcoal);
+    font-weight: 400;
+    font-family: var(--fuente-young);
+}
+
+/* ----- Estilos seccion preparacion ----- */
+.preparacion {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--rose-white);
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: var(--dark-raspberry);
+}
+
+ul li {
+    color: var(--dark-raspberry);
+    line-height: 2;
+    padding-inline-start: 13px;
+}
+
+ul li span {    color: var(--wenge-brown);}
+
+/* ----- Estilos seccion ingredientes ----- */
+.ingredientes ul li {
+    color: var(--nutmeg);
+}
+
+/* ----- Estilos seccion instructiones ----- */
+ol li {
+    color: var(--dark-raspberry);
+    line-height: 2;
+    padding-inline-start: 13px;
+    font-weight: 700;
+}
+
+ol li span {
+    color: var(--wenge-brown);
+    font-weight: 400;
+}
+
+/* ----- Estilos seccion nutricion ----- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr {    border-bottom: 1px solid var(--light-grey);}
+
+/* para que la ultima linea ya no se vea */
+tr:last-of-type {
+    border-bottom: none;
+}
+
+td {    padding: 10px;}
+
+td:nth-child(2) {
+    color: var(--nutmeg);
+    font-weight: 700;
+}
+
+/* ----- Media Query ----- */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+    .contenido {
+        padding: 0;
+    }
+
+    h1 {
+        line-height: 34px;
+    }
+
+    .receta {
+        width: 100%;
+        padding: 20px;
+    }
+}
